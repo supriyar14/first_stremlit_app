@@ -1,5 +1,5 @@
 #to stop previus trouble shoot
-streamlit.stop()
+#streamlit.stop()
 import streamlit
 import pandas
 import requests
@@ -33,7 +33,7 @@ fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # pandas dataframe
 streamlit.dataframe(fruityvice_normalized)
 #importing snowflake 
-
+streamlit.stop()
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("SELECT * from FRUIT_LOAD_LIST")
