@@ -42,7 +42,7 @@ streamlit.stop()
 streamlit.header("Fruit load list contains:")
 def get_fruit_load_list():
  
-  with my_cur = my_cnx.cursor() as my_cur:
+  with my_cnx.cursor() as my_cur:
        my_cur.execute("SELECT * from FRUIT_LOAD_LIST")
        return my_cur.fetchall()
 def insert_row_snowlake(new_fruit):
