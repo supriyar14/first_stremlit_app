@@ -46,7 +46,7 @@ def get_fruit_load_list():
        my_cur.execute("SELECT * from FRUIT_LOAD_LIST")
        return my_cur.fetchall()
 def insert_row_snowlake(new_fruit):
-  with my_cur = my_cnx.cursor() as my_cur:
+  with my_cnx.cursor() as my_cur:
        my_cur.execute("insert into PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST values ('from streamlit')")
        return "Thanks for adding fruit " + new_fruit
 fruit_add = streamlit.text_input('What fruit would you like to add?') 
